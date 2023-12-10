@@ -1,0 +1,71 @@
+
+----------Upload Angular project on github----------
+
+PS E:\Angular\ecom> ng add angular-cli-ghpages
+
+PS E:\Angular\ecom> git init
+
+PS E:\Angular\ecom> git remote add origin https://github.com/Prakash7277/ecom.git
+
+PS E:\Angular\ecom> git status
+
+PS E:\Angular\ecom> git add .
+
+PS E:\Angular\ecom> git commit -m "first commit"
+
+PS E:\Angular\ecom> git push -u origin main
+		OR
+PS E:\Angular\ecom> git push -u origin master
+
+PS E:\Angular\ecom> ng build --base-href "http://Prakash7277.github.io/ecom/"
+
+PS E:\Angular\ecom> npx angular-cli-ghpages --dir=dist/ecom
+
+
+--------- not live project Second Time git cmd --------------- 
+
+
+PS E:\Angular\ecom> git add .
+
+PS E:\Angular\ecom> git commit -m "angular project"
+
+PS E:\Angular\ecom> git push -u origin master
+
+PS E:\Angular\ecom> ng build --base-href "https://Prakash7277.github.io/ecom/"
+
+PS E:\Angular\ecom> npx angular-cli-ghpages --dir=dist/ecom  			
+
+
+
+
+-------------gitHub Error in angular---------
+
+	E:\Spring And Angular>git config --global core.autocrlf false
+
+
+------------How To find my github username-----------
+
+	  git config --global user.name
+
+------------How To find my github useremail-----------
+ 
+	  git config --global user.email
+
+
+-------------How do I pull my project from github?----------------
+
+	git clone git@github.com:username/repo.git
+
+------------Multiple GitHub accounts on the same computer?--------
+
+step 1)  search on desktop 
+     2)  credential manager
+     3)  Windows Credentials
+     4)  Generic Credentials
+     5)  git:https://github.com
+     6)  Remove
+
+     8)  go to => Git Bash => opne
+     9)  git config --global user.name Prakash7277
+     10) git config --global user.email pkp.366@gmail.com
+	
