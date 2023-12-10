@@ -1,0 +1,24 @@
+.row{
+    /* background-color: brown; */
+    background-image: url("/assets/image/bgimg2.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.form-control{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.container{
+   
+   padding: 0 0px;
+   margin-left: 350px  ;  
+   margin-top: 20px;
+ }
+
+ .card>img{
+    height: 300px;
+    width: 200px;
+    
+}

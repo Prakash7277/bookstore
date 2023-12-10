@@ -1,0 +1,54 @@
+<!-- 
+<div class="container" >
+  <form [formGroup]="userForm" (ngSubmit)="submitData()">
+    <div class="wrapper" >
+      <div class="title"><span>Login Form</span></div>
+ 
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Email or Phone" required class="form-control" id="useremail" formControlName="email">
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required class="form-control" id="userpassword" formControlName="password">
+        </div>
+        <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="row button"   >
+          <input type="submit" value="Login">
+        </div>
+      <div class="signup-link">Not a member? <a  (click)="addUser()">Signup now</a></div> -->
+        <!-- <div class="signup-link">Not a member? <a [routerLink]="['/registation']">Signup now</a></div>
+      
+      
+    </div>
+  </form>
+  </div> --> 
+
+
+
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Login Form</span></div>
+      <form action="#" [formGroup]="userForm" (ngSubmit)="submitData()">
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Email" required formControlName="email">
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required formControlName="password">
+        </div>
+        <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a  [routerLink]="['/registation']">Signup now</a></div>
+      </form>
+    </div>
+  </div>
+
+  
+
+
+

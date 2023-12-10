@@ -1,0 +1,90 @@
+<div class="container">
+    <header>Registration</header>
+   
+        <div class="form first" >
+            <form action="#"  [formGroup]="userForm" (ngSubmit)="submit()">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your name" required formControlName="name" name="name">
+                        <div id="usernName" class="form-text text-danger" *ngIf="name.invalid && name.dirty">
+                            <span *ngIf="name.errors!['required']">Name is required </span>
+                            <span *ngIf="name.errors!['minlength']">Name must have at least 3 characters</span>
+                            <span *ngIf="name.errors!['maxlength']">Name must have max 10 characters</span>
+                          </div>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>Date of Birth</label>
+                        <input type="date" placeholder="Enter birth date" required formControlName="birth">
+                        <div  class="form-text text-danger" *ngIf="birth.invalid && ( birth.dirty || birth.touched)">
+                            <div *ngIf="birth.errors!['required']">Birth is required.</div>
+                          </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your email" required formControlName="email">
+                        <div class="form-text text-danger" *ngIf="email.invalid && email.hasError('pattern') && (email.dirty || email.touched)">
+                            <div *ngIf="email.errors!['required']">Email is required.</div>
+                            <div *ngIf="email.errors!['email']">Invalid email format.</div>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label>Mobile Number</label>
+                        <input type="number" placeholder="Enter mobile number" required formControlName="phone">
+                        <div id="phone" class="form-text text-danger" *ngIf="phone.invalid && phone.dirty">
+                            <span *ngIf="phone.errors!['required']">Phone Number is required </span>
+                            <span *ngIf="phone.errors!['minlength']">Invalid phone number format (10 digits allowed).</span>
+                            <span *ngIf="phone.errors!['maxlength']">Invalid phone number format (10 digits allowed).</span>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label>Gender</label>
+                        <select required formControlName="gender">
+                            <option disabled selected>Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                        <div  class="form-text text-danger" *ngIf="gender.invalid && ( gender.dirty || gender.touched)">
+                            <div *ngIf="gender.errors!['required']">gender is required.</div>
+                          </div>
+                    </div>
+                    <div class="input-field">
+                        <label>Password</label>
+                        <input type="password" placeholder="Password" required formControlName="password">
+                        <div id="password" class="form-text text-danger" *ngIf="password.invalid && password.dirty">
+                            <span *ngIf="password.errors!['required']">Password is required </span>
+                            <span *ngIf="password.errors!['minlength']">Password must have at least 3 characters</span>
+                            <span *ngIf="password.errors!['maxlength']">Password must have max 10 characters</span>
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="125" required formControlName="address"></textarea>
+                        <div id="address" class="form-text text-danger" *ngIf="address.invalid && address.dirty">
+                            <span *ngIf="address.errors!['required']">Address is required </span>
+                            <span *ngIf="address.errors!['minlength']">Address must have at least 5 characters</span>
+                            <span *ngIf="address.errors!['maxlength']">Address must have max 30 characters</span>
+                          </div>
+                      </div>
+                      <div>
+                        <!-- <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button> -->
+                        <button type="submit" class="btn btn-primary w-100" >Submit</button>
+                      </div>
+
+                </div>
+  
+            </div>
+           
+                    
+                 
+            

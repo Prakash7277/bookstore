@@ -1,0 +1,30 @@
+
+
+<div class="container mb-3">
+    <div class="row text-center">
+            <div class="col-lg-6">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter Book name" [(ngModel)]="search_by_value" >
+          </div>
+        </div>
+      </div>
+     </div>
+
+  
+
+<div class="row" style="justify-content: space-evenly; ">
+    <div class="card col-lg-3 gy-3" style="width: 18rem;" *ngFor="let book of filtered_book">
+        <img [src]="book.Image" class="book-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Name:{{book.name | titlecase}}</h5>
+          <!-- <h5 class="card-title">Roll_number:{{car.rollNum | titlecase}}</h5> -->
+          <h5 class="card-title">Price:{{book.price |currency :'INR' :'symbol'}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <!-- <a href="#" class=" m-1  w-30 btn btn-primary " (click)="addTocart()" >Add To Cart</a> -->
+         
+          <button type="button" class="btn btn-warning" (click)="addTocart()">Add To Cart</button>
+          <a href="#" class="m-1  w-30 btn btn-primary" >Book now</a>
+
+        </div>
+      </div>
+    </div>
